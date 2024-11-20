@@ -4,7 +4,7 @@ set -euo pipefail
 # TODO(eminguez): not sure about this
 trap 'test -d ${FOLDER} && rm -rf -- "${FOLDER}"' ERR
 
-GUM_SPIN_SPINNER="monkey"
+export GUM_SPIN_SPINNER="dot"
 
 die(){
 	echo "${1}" 1>&2
@@ -32,10 +32,12 @@ get_kubeconfig() {
 select_nodes() {
 	#ALLNODES=$(gum spin --show-output --title "Getting the list of nodes..." -- kubectl get nodes -o go-template='{{range .items}}{{.metadata.name}}({{range .status.conditions}}{{if eq .type "Ready"}}{{if eq .status "True"}}Ready{{else}}Not Ready{{end}}{{end}}{{end}}){{"\n"}}{{end}}')
 	ALLNODES=$(kubectl get nodes -o go-template='{{range .items}}{{.metadata.name}}({{range .status.conditions}}{{if eq .type "Ready"}}{{if eq .status "True"}}Ready{{else}}Not Ready{{end}}{{end}}{{end}}){{"\n"}}{{end}}')
-	[[ -z ${ALLNODES} ]] && die "Not able to get the nodes" 1
+	[[ -z "${ALLNODES}" ]] && die "Not able to get the nodes" 1
 
 	SELECTEDNODES=$(gum choose --no-limit --header "Choose the nodes" $(echo "${ALLNODES}" | tr '\n' ' '))
-	[[ -z ${SELECTEDNODES} ]] && die "Not valid selection" 1
+	if [[ -z "${SELECTEDNODES}" ]]; then
+		die "Not valid selection" 1
+	fi
 }
 
 collect_logs_from_node(){
@@ -99,7 +101,8 @@ select_nodes
 
 gum confirm "Are you sure you want to run rancher2_logs_collector.sh against $(echo ${SELECTEDNODES} | tr '\n' ' ')?" || die "Aborting" 0
 for NODE in ${SELECTEDNODES}; do
-	collect_logs_from_node $(echo "${NODE}" | cut -d"(" -f 1)
+	NODE=$(echo "${NODE}" | cut -d"(" -f1)
+	collect_logs_from_node ${NODE}
 done
 
 exit 0
