@@ -1,0 +1,103 @@
+=============================================================================
+                     Support Utilities - Supportconfig
+                          Script Version: 3.2.0-20
+                         Library Version: 3.2.0-4
+                          Script Date: 2024 Feb 14
+
+ Detailed system information and logs are collected and organized in a
+ manner that helps reduce service request resolution times. Private system
+ information can be disclosed when using this tool. If this is a concern,
+ please prune private data from the log files. Several startup options
+ are available to exclude more sensitive information. Supportconfig data is
+ used only for diagnostic purposes and is considered confidential information.
+ See http://www.suse.com/company/policies/privacy/
+=============================================================================
+
+ Usage: supportconfig [OPTION [OPTION ...]]
+
+  -h This screen
+  -A Activates all supportconfig functions with additional logging and full
+     rpm verification.
+  -B <string> Custom tar ball file name element
+  -C Creates a new default /etc/supportutils/supportconfig.conf
+  -D Use defaults; ignore  /etc/supportutils/supportconfig.conf
+  -E <string> Contact email address
+  -F Display available supportconfig feature keywords (case-sensitive) used
+     with -i and -x
+  -G <gpg_uid> The GPG recipient's user ID used to encrypt the supportconfig tarball
+  -H <number> Limit number of included HA Policy engine files
+  -I <number> Default log file line count
+  -J Collect memory information from sysfs
+  -L Create a full file listing from '/'
+  -M <string> Contact terminal ID
+  -N <string> Contact name
+  -O <string> Contact company name
+  -P <string> Contact phone number
+  -Q Run in silent mode
+  -R <path> Log output directory
+  -S <number> Limit number of included SAR files
+  -T <seconds> Binary execution timeout
+  -U <URI string> Sets upload target URL and initiates an upload, supported
+                  services include: ftp, ftps/ftpes, https, scp
+  -X <number> Max system logs line count
+  -a Upload the tar ball to the specified alternate target VAR_OPTION_UPLOAD_TARGET_ALT
+  -b Screen buffer mode
+  -c Disables curl checks to SUSE update servers
+  -d Exclude detailed disk info and scans
+  -e Disables extended scaling, forcing the gathering of extended proc and irq data
+  -f From directory. Don't collect report files, just use the directory or files in that
+     directory.
+  -g Use gzip instead of the default xz compression
+  -i <keyword list>
+     Include keywords. A comma separated list of feature keywords that specify
+     which features to include. Use -F to see a list of valid keywords.
+  -k disable all commands that do automatic kernel module loading.
+  -l Gathers additional rotated logs
+  -m Only gather a minimum amount of info: basic env, basic health, hardware,
+     rpm, messages, y2logs
+  -o Toggle listed features on or off
+  -p Disable all plugins
+  -q Add a uuid to the tar ball filename to ensure uniqueness
+  -r <srnum>
+     Includes the service request number when uploading the tar ball
+  -s Include full SLP service lists
+  -t <directory>
+     Target directory. Just save log files to <directory>, do not create a tarball.
+  -u Upload the tar ball to the specified VAR_OPTION_UPLOAD_TARGET.
+  -v Performs an rpm -V for each installed rpm  NOTE: This takes a long time
+     to complete
+  -w Enable verbose wait trace logging. Shows the start and stop times of each
+     command supportconfig is running.
+  -x <keyword list>
+     Exclude keywords. A comma separated list of feature keywords that specify
+     which features to exclude. Use -F to see a list of valid keywords.
+  -y Gathers full YaST log files.
+  -z Use bzip2 instead of the default xz compression
+
+  Use Ctrl-\ to try and skip a function that is hanging.
+
+-----------------------------------------------------------------------------
+  NOTE:
+  This tool will create a tar ball in the /var/log directory. Please attach
+  the log file tar ball to your open Service Request at the following URL:
+  https://scc.suse.com/support/requests
+
+  If you cannot attach the tar ball to the SR, then email it to the engineer.
+
+  Please submit bug fixes or comments via:
+  https://en.opensuse.org/openSUSE:Submitting_bug_reports
+
+=============================================================================
+                     Support Utilities - Supportconfig
+                          Script Version: 3.2.0-20
+                         Library Version: 3.2.0-4
+                          Script Date: 2024 Feb 14
+
+ Detailed system information and logs are collected and organized in a
+ manner that helps reduce service request resolution times. Private system
+ information can be disclosed when using this tool. If this is a concern,
+ please prune private data from the log files. Several startup options
+ are available to exclude more sensitive information. Supportconfig data is
+ used only for diagnostic purposes and is considered confidential information.
+ See http://www.suse.com/company/policies/privacy/
+=============================================================================

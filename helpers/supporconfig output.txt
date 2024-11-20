@@ -1,0 +1,109 @@
+=============================================================================
+                     Support Utilities - Supportconfig
+                          Script Version: 3.2.0-20
+                         Library Version: 3.2.0-4
+                          Script Date: 2024 Feb 14
+
+ Detailed system information and logs are collected and organized in a
+ manner that helps reduce service request resolution times. Private system
+ information can be disclosed when using this tool. If this is a concern,
+ please prune private data from the log files. Several startup options
+ are available to exclude more sensitive information. Supportconfig data is
+ used only for diagnostic purposes and is considered confidential information.
+ See http://www.suse.com/company/policies/privacy/
+=============================================================================
+
+Gathering system information
+  Data Directory:       /var/log/scc_vm1_241119_1638
+
+  Basic Server Health Check...                 Done
+  RPM Database...                              Done
+  Basic Environment...                         Done
+  Open Files...                                Done
+  System Modules...                            Done
+  Memory Details...                            Done
+  Disk I/O...                                  Done
+  B-tree File System...                        Done
+  Transactional Update...                      Done
+  Tuned...                                     Skipped
+  YaST Files...                                Done
+  Filesystem List...                           Skipped
+  Auditing...                                  Done
+  Crash Info...                                Done
+  Email...                                     Skipped
+  NTP...                                         PROC...                                      Done
+  Boot Files...                                Done
+  Plymouth...                                  Done
+  SLERT...                                     Skipped
+  Updates...                                   Done
+  NVMe...                                      Skipped
+  BPF...                                       Done
+  SMT...                                       Skipped
+  HA Cluster...                                Error
+  OCFS2...                                     Skipped
+  DRBD...                                      Skipped
+  HAPROXY...                                   Skipped
+  PAM...                                       Restricted
+  LDAP...                                      Skipped
+  System Security Services...                  Skipped
+  CIMOM...                                     Skipped
+  Environment...                               Done
+  Command History...                           Excluded
+  ETC...                                       Done
+  SYSCONFIG...                                 Done
+  SYSFS...                                     Done
+  SystemD...                                   Done
+  Docker...                                    Done
+  Podman...                                    Done
+  UDEV...                                      Done
+  LVM...                                       Please Wait... Base Detail Done
+  Software Raid...                             Done
+  Multipathing...                              Skipped
+  Networking...                                /sbin/supportconfig: line 1873: ip netns exec cni-304b7630-b9b0-7fd0-dc8b-2d25f214ff67 nft: command not found
+/sbin/supportconfig: line 1873: ip netns exec cni-b137ca45-d757-258d-2eba-8d56211e7fc1 nft: command not found
+/sbin/supportconfig: line 1873: ip netns exec cni-e626f394-94b9-ff0e-e763-698b116d53bf nft: command not found
+/sbin/supportconfig: line 1873: ip netns exec cni-2cbf6dea-b6c8-b281-429e-647f73c2f1cd nft: command not found
+/sbin/supportconfig: line 1873: ip netns exec cni-523b2093-bdfe-7b12-c6e2-60719b98293c nft: command not found
+/sbin/supportconfig: line 1873: ip netns exec cni-1a6685b8-7a75-19cb-22be-8f9053c25c4f nft: command not found
+/sbin/supportconfig: line 1873: ip netns exec cni-ee2ba405-1bde-70ac-3362-f6e2a0f198d6 nft: command not found
+/sbin/supportconfig: line 1873: ip netns exec cni-ff43474e-274a-340b-f4b2-f60414d89a63 nft: command not found
+/sbin/supportconfig: line 1873: ip netns exec cni-71e48a31-8a9d-6e17-5c5f-ea212f041c5e nft: command not found
+/sbin/supportconfig: line 1873: ip netns exec cni-60a15803-18c9-217d-7b9e-122ea3d583a4 nft: command not found
+/sbin/supportconfig: line 1873: ip netns exec cni-e74e2dde-5fd9-189b-0f77-3ed0006164e2 nft: command not found
+/sbin/supportconfig: line 1873: ip netns exec cni-42468233-e576-f664-deea-5924b02360bf nft: command not found
+/sbin/supportconfig: line 1873: ip netns exec cni-351459fb-cb74-7b61-b0d5-57b5b007e335 nft: command not found
+/sbin/supportconfig: line 1873: ip netns exec cni-3b15c697-67ac-5a8c-6cc2-23abc7dfc241 nft: command not found
+/sbin/supportconfig: line 1873: ip netns exec cni-78230a8e-557a-6db2-0143-b312488308b6 nft: command not found
+/sbin/supportconfig: line 1873: ip netns exec cni-a6173866-9fe1-f8cb-2318-caffb261e343 nft: command not found
+/sbin/supportconfig: line 1873: ip netns exec cni-48c0537b-f9c0-6e4d-0e91-38f4d878ea04 nft: command not found
+/sbin/supportconfig: line 1873: ip netns exec cni-9b039150-4097-b538-6de5-800d8bb35b5b nft: command not found
+Done
+  Web...                                       Skipped
+  InfiniBand...                                Skipped
+  DNS...                                       Skipped
+  DHCP...                                      Skipped
+  SLP...                                       Done
+  SSH...                                       Done
+  iSCSI...                                     Done
+  Samba...                                     Done
+  NFS...                                       Done
+  AUTOFS...                                    Skipped
+  SAR Files...                                 Skipped
+  SELinux...                                   Done
+  X...                                           Printing...                                  Skipped
+  SMART Disks...                               Excluded
+  Livepatch...                                 Skip
+  Hardware...                                  Please Wait... Done
+  Supportconfig Plugins:                       2
+    Plugin: qemu...                            Done
+    Plugin: libvirt...                         Done
+  System Logs...                               Done
+  Local/Warn Logs...                           Done
+
+Creating Tar Ball
+
+==[ DONE ]===================================================================
+  Log file tar ball: /var/log/scc_vm1_241119_1638.txz
+  Log file size:     1.3M
+  Log file md5sum:   a864fdda8078896b878b8e8be7f99426
+=============================================================================

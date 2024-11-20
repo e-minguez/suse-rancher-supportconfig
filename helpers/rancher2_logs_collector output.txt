@@ -1,0 +1,26 @@
+tee: /collector-output.log: Read-only file system
+2024-11-19 16:40:34: Created /tmp/tmp.ceGEuhefIg
+2024-11-19 16:40:34: Detecting available commands... renice ionoice
+2024-11-19 16:40:34: Detecting OS... sl-micro 6.0
+2024-11-19 16:40:34: Detecting k8s distribution... rke2
+2024-11-19 16:40:35: Using RKE2 binary... /opt/rke2/bin/rke2
+2024-11-19 16:40:35: Using RKE2 data-dir... /var/lib/rancher/rke2
+2024-11-19 16:40:35: Detecting init type... systemd
+2024-11-19 16:40:35: Collecting system info
+2024-11-19 16:40:56: Collecting network info
+2024-11-19 16:40:56: Collecting provisioning info
+2024-11-19 16:40:58: Collecting rke2 info
+2024-11-19 16:41:01: Collecting rke2 cluster logs
+2024-11-19 16:41:03: Collecting rke2 system pod logs
+2024-11-19 16:41:10: Collecting rke2 static pod manifests
+2024-11-19 16:41:10: Collecting rke2 agent/server logs
+2024-11-19 16:41:10: Collecting rke2 directory state
+2024-11-19 16:41:10: Collecting rke2 certificates
+2024-11-19 16:41:10: Collecting rke2 server certificates
+2024-11-19 16:41:10: Collecting rke2 etcd info
+2024-11-19 16:41:10: Collecting rke2 etcd metrics
+2024-11-19 16:41:10: Collecting system logs from /var/log
+2024-11-19 16:41:10: Collecting system logs from journald
+2024-11-19 16:41:11: Created /tmp/vm1-2024-11-19_16_40_34.tar.gz
+2024-11-19 16:41:11: Removing /tmp/tmp.ceGEuhefIg
+2024-11-19 16:41:11: Finished
