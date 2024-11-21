@@ -12,6 +12,7 @@ die(){
 }
 
 init() {
+	clear
 	gum style \
 		--foreground 212 --border-foreground 212 --border double \
 		--align center --width 50 --margin "1 2" --padding "2 4" \
@@ -83,15 +84,15 @@ collect_logs_from_node(){
 	echo "File available at ${RESULTS}"
 
 	OSID=$(ssh "${SCPUSER}"@"${SCPHOST}" -- grep '^ID=' /etc/os-release)
-	if [[ "${OSID}" != "sl-micro" ]]; then
+	if [[ "${OSID}" != 'ID="sl-micro"' ]]; then
 		echo "Done"
-	fi
-
-	if gum confirm "The OS has been detected as SL Micro, do you want to run supportconfig there?" ; then
-		gum spin --show-output --title "Running supportconfig on ${NODE}" -- ssh "${SCPUSER}"@"${SCPHOST}" supportconfig -R "${DESTINATION}/output/" || die "Error running supportconfig on ${NODE}" 1
-		gum spin --title "Collecting the supportconfig files on ${NODE}" -- scp "${SCPUSER}"@"${SCPHOST}":"${DESTINATION}/output/*.txz*" "${FOLDER}"/ || die "Error collecting the log file on ${NODE}" 1
-		RESULTS=$(find ${FOLDER} -type f -iname "*.txz")
-		echo "File available at ${RESULTS}"
+	else
+		if gum confirm "The OS has been detected as SL Micro, do you want to run supportconfig there?" ; then
+			gum spin --show-output --title "Running supportconfig on ${NODE}" -- ssh "${SCPUSER}"@"${SCPHOST}" supportconfig -R "${DESTINATION}/output/" || die "Error running supportconfig on ${NODE}" 1
+			gum spin --title "Collecting the supportconfig files on ${NODE}" -- scp "${SCPUSER}"@"${SCPHOST}":"${DESTINATION}/output/*.txz*" "${FOLDER}"/ || die "Error collecting the log file on ${NODE}" 1
+			RESULTS=$(find ${FOLDER} -type f -iname "*.txz")
+			echo "File available at ${RESULTS}"
+		fi
 	fi
 }
 
